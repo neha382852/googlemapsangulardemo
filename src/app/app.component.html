@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<h1>{{ title }}</h1>
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="lat" [longitude]="lng" #gm  >
+    <agm-marker 
+    *ngFor="let m of markers; let i = index"
+    [latitude]="m.lat"
+    [longitude]="m.lng"
+    [label]="m.label"
+    [iconUrl]="m.iconUrl"
+    [markerClickable]="m.markerClickable"
+ 
+ 
+    (markerClick)="getDirection(m,m.lat,m.lng)"
+
+    >
+   
+   
+      <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true">
+        <ng-template>
+            {{m.name}}
+            {{m.rating}}
+        </ng-template>
+      </agm-snazzy-info-window>
+   
+      <agm-direction [origin]="origin" [destination]="destination">
+    </agm-direction>
+  
+</agm-marker>
+ 
+</agm-map>
