@@ -16,7 +16,7 @@ import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
     FormsModule,
     AgmCoreModule.forRoot(
       {
-        apiKey:'AIzaSyA9v-ByUMauD8TazXdViq_f7RF-EHru86A'
+        apiKey:'Your_Key'
       }
     ), AgmDirectionModule,
     AgmSnazzyInfoWindowModule,
