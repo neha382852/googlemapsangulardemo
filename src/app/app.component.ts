@@ -25,6 +25,9 @@ export class AppComponent {
 //marker.iconUrl = "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
   }
  
+  public renderOptions = {
+    suppressMarkers: true,
+}
 
 markers: marker[] = [
   {
